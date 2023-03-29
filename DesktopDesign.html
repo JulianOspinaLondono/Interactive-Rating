@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Desktop Design</title>
+
+    <style>
+        :root {
+            --Primary-Orange: hsl(25, 97%, 53%);
+            --White: hsl(0, 0%, 100%);
+            --Light-Grey: hsl(217, 12%, 63%);
+            --Medium-Grey: hsl(216, 12%, 54%);
+            --Dark-Blue: hsl(213, 19%, 18%);
+            --Very-Dark-Blue: hsl(216, 12%, 8%);
+            --Font-size-paragraph: 15px;
+            --font-family: 'Overpass', sans-serif;
+            --Weight1: 400;
+            --Weight2: 700;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            background: var(--Very-Dark-Blue);
+            font-family: var(--font-family);
+            font-size: var(--Font-size-paragraph);
+        }
+        .container {
+            background-color: var(--Dark-Blue);
+            display: grid;
+            width: 350px;
+            height: 350px;
+            margin-top: 200px;
+            border-radius: 24px;
+            padding: 28px;
+            color: var(--Light-Grey);
+        }
+        .button-icon {
+            align-self: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            border: 0px solid;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--Very-Dark-Blue);
+        }
+        .starIcon {
+            width: 14px;
+            height: 14px;
+        }
+        .title-p {
+            align-self: center;
+        }
+        .title {
+            color: var(--White);
+            margin-bottom: 8px;
+            margin-top: 0px;
+        }
+        .paragraph {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0px;
+        }
+        .options button{
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            border: 0px solid;
+            background-color: var(--Very-Dark-Blue);
+            color: var(--Light-Grey);
+        }
+        .options button:hover {
+            cursor: pointer;
+            color: var(--White);
+            background: var(--Primary-Orange);
+        }
+        .options button:active {
+            background: var(--Medium-Grey);
+            color: var(--White);
+        }
+        .options button:focus {
+            background: var(--Medium-Grey);
+            color: var(--White);
+        }
+        .submit {
+            border-radius: 20px;
+            width: 100%;
+            height: 40px;
+            align-self: center;
+            border: 0px solid;
+            background: var(--Primary-Orange);
+            color: var(--White);
+        }
+        .submit:hover {
+            cursor: pointer;
+            color: var(--Primary-Orange);
+            background: var(--White);
+        }
+        .submit:active {
+            background: var(--Medium-Grey);
+            color: var(--White);
+        }
+        @media (max-width: 375px) {
+            .container {
+                width: 280px;
+                height: 320px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button disabled class="button-icon">
+            <img src="./images/icon-star.svg" alt="star" class="starIcon">
+        </button>
+        <div class="title-p">
+            <h1 class="title">How did we do?</h1>
+            <p class="paragraph">Please let us now how we did with your support request. All feedback is appreciated to help us improve our offering!.</p>
+        </div>    
+        <div class="options">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+        </div>
+        <button type="submit" class="submit">SUBMIT</button>
+    </div>
+</body>
+</html>
